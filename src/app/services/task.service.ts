@@ -13,7 +13,7 @@ const httpOptions={
 })
 
 export class TaskService {
-  private apiUrl='http://localhost:5000/tasks'
+  private apiUrl='http://localhost:3000/tasks'
 
 //component mai jaise service waise service mai httpclient
   constructor(private http:HttpClient) { 

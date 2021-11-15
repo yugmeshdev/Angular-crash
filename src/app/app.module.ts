@@ -10,6 +10,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { FormsModule } from '@angular/forms';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,13 +22,21 @@ import { FormsModule } from '@angular/forms';
     ButtonComponent,
     TasksComponent,
     TaskItemComponent,
-    AddTaskComponent
+    AddTaskComponent,
+
+    DropdownComponent,
   ],
   imports: [
     BrowserModule,
-    FontAwesomeModule,HttpClientModule,FormsModule
+    FontAwesomeModule,
+    HttpClientModule,
+    FormsModule,
+    NoopAnimationsModule,  MatFormFieldModule,
+    MatInputModule,MatSelectModule
+
+    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

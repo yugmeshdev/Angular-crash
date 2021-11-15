@@ -1,0 +1,15 @@
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>Table</mat-label>
+    <mat-select menuPlacement="top" >
+      <mat-option *ngFor="let table of tables" [value]="table.value">
+        {{table.viewValue}}
+      </mat-option>
+    </mat-select>
+  
+  </mat-form-field>
+  <h4>Hello there
+
+  </h4>
+
+</div>
