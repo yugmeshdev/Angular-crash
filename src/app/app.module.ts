@@ -15,6 +15,13 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+import { RouterModule,Routes } from '@angular/router';
+import { AbputComponent } from './components/abput/abput.component';
+import { FooterComponent } from './components/footer/footer.component';
+const appRoutes:Routes=[
+  {path:'',component:TasksComponent},
+  {path:'about',component:AbputComponent}
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +32,8 @@ import {MatSelectModule} from '@angular/material/select';
     AddTaskComponent,
 
     DropdownComponent,
+     AbputComponent,
+     FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +42,7 @@ import {MatSelectModule} from '@angular/material/select';
     FormsModule,
     NoopAnimationsModule,  MatFormFieldModule,
     MatInputModule,MatSelectModule
-
+    ,RouterModule.forRoot(appRoutes,{enableTracing:true})
     
   ],
   providers: [],
